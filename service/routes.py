@@ -42,9 +42,9 @@ def list_counters():
 
     counters = [
         dict(
-            name=count[0], 
+            name=count[0],
             counter=count[1]
-        ) 
+        )
         for count in COUNTER.items()
     ]
 
@@ -61,7 +61,7 @@ def create_counters(name):
 
     if name in COUNTER:
         return abort(
-            status.HTTP_409_CONFLICT, 
+            status.HTTP_409_CONFLICT,
             f"Counter {name} already exists"
         )
 
